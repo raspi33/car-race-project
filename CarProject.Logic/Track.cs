@@ -13,9 +13,6 @@ public class Track
     if (trackList == null || trackList.Count == 0)
       throw new ArgumentNullException(nameof(trackList));
 
-    _trackList = trackList;
-    _loopedTrack = trackShallLoop;
-
     if (LoopedTrack)
       _trackList.Last().AddAfterMe(_trackList.First());
   }
